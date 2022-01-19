@@ -1,9 +1,33 @@
 \documentclass[11pt,twoside,letterpaper]{report}
-\author{Jos'e Hiram Soltren}
+
+% Dedication
+% https://tex.stackexchange.com/questions/102830/dedication-page-in-article-class
+\usepackage[paper=letterpaper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\newenvironment{dedication}
+  {\clearpage           % we want a new page
+   \thispagestyle{empty}% no header and footer
+   \vspace*{\stretch{1}}% some space at the top
+   \itshape             % the text is in italics
+   \raggedleft          % flush to the right margin
+  }
+  {\par % end the paragraph
+   \vspace{\stretch{3}} % space at bottom is three times that at the top
+   \clearpage           % finish off the page
+  }
+
+
+\author{Jos\'e Hiram Soltren}
 \title{CFI Notebook}
 \begin{document}
 
 \maketitle
+
+\begin{dedication}
+For Zo\"e, Sebastian, and Malcolm, who hopefully find as much inspiration from me
+as I do from them. I hope that they can learn to fly one day too.
+\end{dedication}
+
+\tableofcontents
 
 \input{resources/high-altitude.tex}
 
