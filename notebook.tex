@@ -1,5 +1,10 @@
 \documentclass[12pt,twoside,letterpaper]{report}
 
+\usepackage[backend=biber]{biblatex}
+\addbibresource{notebook.bib}
+
+\usepackage[]{hyperref}
+
 % Dedication
 % https://tex.stackexchange.com/questions/102830/dedication-page-in-article-class
 \usepackage[paper=letterpaper,left=30mm,right=30mm,top=40mm,bottom=40mm]{geometry}
@@ -32,5 +37,7 @@ as I do from them. I hope that they can learn to fly one day too.
 \input{resources/high-altitude.tex}
 
 \input{resources/commercial-pilot.tex}
+
+\printbibliography
 
 \end{document}
