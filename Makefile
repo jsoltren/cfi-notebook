@@ -13,6 +13,7 @@ notebook.toc :
 
 notebook.pdf : resources/* notebook.toc bibliography
 	$(PDFLATEX) notebook.tex
+	open notebook.pdf
 
 clean :
 	git clean -xdf
