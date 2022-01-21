@@ -5,15 +5,14 @@ TEX = latex
 
 all : notebook.toc notebook.pdf
 
+bibliography:
+	biber notebook
+
 notebook.toc :
 	$(TEX) notebook.tex
 
-notebook.pdf : resources/* notebook.toc
+notebook.pdf : resources/* notebook.toc bibliography
 	$(PDFLATEX) notebook.tex
 
 clean :
-	rm -f notebook.aux
-	rm -f notebook.dvi
-	rm -f notebook.log
-	rm -f notebook.pdf
-	rm -f notebook.toc
+	git clean -xdf
