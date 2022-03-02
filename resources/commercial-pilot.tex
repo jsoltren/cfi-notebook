@@ -73,6 +73,12 @@ The author has, as of this writing, spent the most time in the P32T type, a T-ta
 
 The Lance has a wide range of flight envelopes. It flies very differently when nose loaded with a forward center of gravity (CG), as opposed to when aft loaded with a rear CG. The numbers and profiles in this section assume a ``checkride profile''. This includes a pilot and an observer in the front seat totaling 440 lbs, 50 gallons of fuel in the tanks, 20 lbs of baggage in the nose, 40 lbs of bags on the second row seats, and 50 lbs of baggage in the tail. This should give a CG station of about 86 inches. When practicing maneuvers for the checkride, it's important to get the plane set up almost the same every time. For me, this meant flying with a number of safety pilots, who were more than happy to provide ballast in the front right seat.
 
+I did these maneuvers in Texas winter and early spring weather. This generally meant field elevations of 1000 AGL and density altitudes of about 1500 AGL when landing. I've found the Lance to be extremely sensitive to density altitude, particularly when landing. At density altitudes approaching sea level, the Lance wants to float on the runway, and it may be necessary to cut power four or more hundred feet early to make a mark. Conversely, at high density altitudes, the Lance becomes even more of a flying brick and wants to sink through ground effect.
+
+On checkride day I would recommend doing the maneuvers that day to see what the airplane wants to do.
+
+But first a thought. Why do we even do these maneuvers? Doing a chandelle or steep turns with paying passengers who don't expect those maneuvers is not a great idea. The lazy eights and eights on pylons have almost no practical application. The best rationale I can come up with is this: they demonstrate mastery of a complex, albeit fairly arbitrary, maneuver. As a commercial pilot you won't do these maneuvers. But you could be doing crop dusting. Or, you could be doing aerial surveillance, which requires flying back and forth along the ground. Or, you could be flying an aerial photographer around, who needs to keep a photographic subject in one place. Thinking of it as a job interview, the mastery of these maneuvers gives a potential employer a \emph{baseline} of performance. It's sort of like inverting a binary tree on a programming interview: you'll never do it in practice, but you show it to the interviewer to demonstrate mastery.
+
 For consistency, I will explore these topics in the same order in which they appear in the Commercial Pilot ACS in the subsections that follow.
 
 \subsection{Maneuvering Speed}
@@ -476,6 +482,78 @@ If you're still stuck, have a look at \url{https://www.av8n.com/how/htm/maneuver
 Anyway. All the quantification aside, this is supposed to be a \emph{smooth} maneuver. We're not fighting the airplane on the controls or micro-managing it. We're making small, subtle control inputs.
 
 \subsection{Eights on Pylons}
+
+The commercial pilot maneuver ``eights on pylons'' has us turning about two ground reference points, about three-quarters of a mile apart. The idea is to fly around one, then head to the other and turn in the opposite direction. We enter the maneuver on the downwind, at our highest ground speed, and fly it at constant power.
+
+When in the turn, the goal is to keep the wing pointed precisely at the pylon, so that it appears to be frozen in one spot looking out the window.
+
+We recall that this is a constant power maneuver. So how can we keep the pylon in exactly one place? The answer is with altitude control.
+
+As it turns out, to keep the wing pointed at a single reference, altitude and ground speed are closely coupled. I'll attempt to build some intuition for this before diving into a more formal proof.
+
+If we are in a car driving along - at zero altitude - it is impossible to do this maneuver. There is no way to control where anything is in the window whizzing past us. If we were to climb (imagine an overpass), the ground would "slow down". Things tend to get behind us really quickly.
+
+Conversely, if we were to find ourselves up in space, the ground would effectively appear to stand still at the sorts of speeds a single engined airplane could fly (assuming there is any air up there to hold us up). If we tried to turn, we would have to cover an incredibly long distance to keep a point in one place.
+
+The intuition is as follows:
+
+\begin{itemize}
+    \item Reference point moving behind the wing. We are too low! Climb!
+    \item Reference point moving in front of the wing. We are too high! Descend!
+\end{itemize}
+
+So, there is a ``sweet spot'' of altitudes, and it happens to be around 1000 AGL.
+
+Using some trigonometry, vector decomposition, and basic physics, we can prove that, for every ground speed, there is an altitude that allows us to turn with the wing pointed at a point on the ground. Curiously enough, radius and bank angle - through related to one another - have nothing to do with the pivotal altitude.
+
+A really nice discussion of the proof is here: \url{https://www.youtube.com/watch?v=oc9mqDadv\_M}.
+
+The FAA's training materials focus exclusively on ground speed. But, the proof I just shared, also talks about air speed.
+
+Using a spreadsheet, I was able to calculate this pivotal altitude chart, rounded to the nearest 5 feet for simplicity.
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{ |c|c| }
+    \hline
+    Ground Speed & Absolute Altitude \\
+    (knots) & (feet) \\
+    \hline
+     60 &  320 \\
+     65 &  375 \\
+    \hline
+     70 &  435 \\
+     75 &  500 \\
+    \hline
+     80 &  565 \\
+     85 &  640 \\
+    \hline
+     90 &  715 \\
+     95 &  800 \\
+    \hline
+    100 &  885 \\
+    105 &  975 \\
+    \hline
+    110 & 1070 \\
+    115 & 1170 \\
+    \hline
+    120 & 1275 \\
+    125 & 1385 \\
+    \hline
+    130 & 1495 \\
+    135 & 1615 \\
+    \hline
+\end{tabular}
+\end{center}
+\caption{Pivotal Altitude Chart}
+\end{figure}
+
+Have a good look at those altitudes. Remember we never want to be lower than 500 AGL if we can help it, especially on a checkride, which means we'll be flying this maneuver ideally at 75 knots at the slowest. Remember, we're turning through the maneuver, and going from a tailwind to a headwind, which means we'll be scrubbing a good deal of airspeed and altitude.
+
+In the Lance, I like to enter this maneuver at about 120 knots, 2400 RPM, 20'' of pressure, so that the speed doesn't get too low.
+
+The commercial pilot ACS wants us to not exceed a bank angle of 40 degrees. Recalling that bank angle is solely a function of horizontal distance to the pylon, we'll want to make sure we keep enough horizontal space from the pylon to enable this.
+
 
 \subsection{Maneuvering During Slow Flight and Stalls}
 
