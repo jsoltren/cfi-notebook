@@ -1,4 +1,4 @@
-\documentclass[12pt,twoside,letterpaper]{report}
+\documentclass[11pt,twoside,letterpaper,twocolumn]{report}
 
 \usepackage{parskip}
 
@@ -29,7 +29,8 @@
 
 % Dedication
 % https://tex.stackexchange.com/questions/102830/dedication-page-in-article-class
-\usepackage[paper=letterpaper,left=30mm,right=30mm,top=40mm,bottom=40mm]{geometry}
+%\usepackage[paper=letterpaper,left=30mm,right=30mm,top=40mm,bottom=40mm]{geometry}
+\usepackage[paper=letterpaper,left=15mm,right=15mm,top=15mm,bottom=25mm]{geometry}
 \newenvironment{dedication}
   {\clearpage           % we want a new page
    \thispagestyle{empty}% no header and footer
@@ -65,13 +66,15 @@
 \vspace{0.5\textheight} % Whitespace between the title block and the publisher
 
 {\noindent Soltren Consulting LLC}\\[\baselineskip] % Publisher and logo
+{\noindent \today }\\[\baselineskip] % Publisher and logo
 }
 
 \end{titlepage}
 
 \begin{dedication}
-For Zo\"e, Sebastian, and Malcolm, who hopefully find as much inspiration from me \\
-as I do from them. I hope they learn to fly one day too.
+For Zo\"e, Sebastian, and Malcolm, who hopefully find\\
+as much inspiration from me as I do from them.\\
+I hope they learn to fly one day too.
 \end{dedication}
 
 \input{resources/introduction.tex}
