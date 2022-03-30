@@ -4,6 +4,8 @@ It is important to know the capabilities of the airplane. It is also important t
 
 The Lance in particular has a huge variation in operating weight and center of gravity. A nose loaded, light Lance is practically a different airplane from a tail loaded, heavy Lance. It's important to explore the envelope of the plane in flight. But first, it's important to understand the envelope on the ground.
 
+This chapter references the Lance's POH heavily. It is here: \url{https://tinyurl.com/n36262poh}.
+
 
 \section{The Power Curve}
 
@@ -25,9 +27,9 @@ The one gotcha with this explanation of the power curve is that it doesn't reall
 
 \section{Speed Definitions}
 
-Now that we've built a rigorous framework for describing airplane behavior using the power curve mode, we can go ahead and define some speeds. The following speeds are appropriate for a complex single engine airplane.
+Now that we've built a rigorous framework for describing airplane behavior using the power curve mode, we can go ahead and define some speeds. The following speeds are appropriate for a complex single engine airplane. We do quote the Lance's POH here heavily but I find the POH definitions sorely lacking.
 
-$V_S$ or $V_{S0}$ are the stalling speeds in the cruise or clean configuration: gear up, flaps up. This is the leftmost point on the power curve, the barrier between the stalled and mushing regimes.
+$V_S$ or $V_{S0}$ are the stalling speeds in the cruise or clean configuration: gear up, flaps up. This is the leftmost point on the power curve, the barrier between the stalled and mushing regimes. From the Lance's POH: ``stalling speed, or the minimum steady flight speed at which the airplane is controllable.''
 
 $V_{S1}$ is the stalling speed in the landing or dirty configuration: gear down, flaps down. Since extending the flaps moves the power curve to the left, stalling speed is lowered.
 
@@ -43,19 +45,19 @@ $V_Y$ is the best \emph{rate} of climb speed, which we use to gain altitude quic
 
 $V_G$ is the best glide speed. $V_Y$ is a reasonable guess.
 
-$V_{FO}$ is the flap operation speed.
+$V_{FO}$ is the flap operation speed. We don't have a specific one for the Lance.
 
-$V_{FE}$ is the flap extension speed.
+$V_{FE}$ is the flap extension speed. This is the speed at which the flaps may be extended. From the POH: ``the highest speed permissible with wing flaps in a prescribed extended position.''
 
-$V_A$ is the maneuvering speed.
+$V_A$ is the maneuvering speed. It is ``the maximum speed at which application of full available aerodynamic control will not overstress the airplane.'' I talk about $V_A$ in a later chapter, but realize that it depends on weight, and tests \emph{a single control's full deflection at once}. Putting multiple controls to full deflection may overstress the airframe.
 
-$V_{LO}$ is the landing gear operation (retraction) speed.
+$V_{LO}$ is the landing gear operation (retraction) speed. This is the maximum speed at which the landing gear may be safely extended or retracted.
 
-$V_{LE}$ is the landing gear extension speed.
+$V_{LE}$ is the landing gear extended speed. It is ``the maximum speed at which an aircraft can be safely flown with the landing gear extended.''
 
-$V_{NO}$ is the ``normal operating'' speed.
+$V_{NO}$ is the ``normal operating'' speed. ``Maximum Structural Cruising Speed is the speed that should not be exceeded except in smooth air and then only with caution.''
 
-$V_{NE}$ is the never exceed speed.
+$V_{NE}$ is the never exceed speed. Operations past this speed are likely to cause structural damage to the aircraft.
 
 \section{Lift and Weight}
 
@@ -113,6 +115,79 @@ V_S' = V_S \sqrt{\frac{New Weight}{Old Weight}}
 \item Configuration:
 \item Attitude:
 \end{itemize}
+
+\section{Limitations}
+
+Along with performance, we need to understand the limitations of the aircraft. This section focuses on the Lance's limitations as mentioned in the POH. It references the performance charts in the Lance's POH heavily.
+
+``Remember: to get chart performance, follow the chart procedures.''
+
+\subsection{Airspeed System Calibration}
+
+Recall that calibrated airspeed is indicated airspeed corrected for installation and instrument errors.
+
+The correspondence between KIAS and KCAS is largely linear. There is a slightly less linear region below max lift/drag speed.
+
+Putting the flaps full down introduces about 2-3 knots of calibration error.
+
+The reported calibration is at max gross weight.
+
+There is no indication that calibrated airspeed varies with weight. Since we're simply concerned with the pressure differential in the pitot-static system, the weight should be no factor. If the airplane were infinitely heavy (tied down) the indications would be the same as if the airplane were neutrally buoyant (hovering just above the ground).
+
+\subsection{Stall Speed versus Angle of Bank}
+
+There is a well known correspondence between load factor and stall speed. This chart draws the correspondence between angle of bank, in degrees, and the stall speed with the flaps full down or the flaps full up.
+
+Looking at the chart, we can tell that the airplane's stall speed with the flaps down is one knot lower.
+
+The chart calls out maximum gross weight. As we know from earlier, the stall speed of the airplane varies with loading, which would cause the curve(s) to translate downward as stall speed lowers with reduced weight.
+
+The chart does not provide stall speeds for bank angles beyond sixty degrees. Thus, we could take this to mean that a sixty degree bank is an operational limitation.
+
+\subsection{Flaps Second Notch Takeoff Performance and Ground Roll}
+
+This chart tells us our takeoff distance over a fifty foot barrier as a function of outside air temperature, pressure altitude, weight, and wind.
+
+The chart numbers assume wide open throttle 2700 RPM, holding the brakes, and a paved, level, dry runway. They implicitly assume aft trim since the short field procedure calls this out.
+
+We are cautioned that a nose heavy airplane has a harder time taking off. ``Takeoff distance is increased by approximately 25\% at CGs forward of 85 inches.'' 
+
+The chart is divided into three sections. The relations are decidedly nonlinear, but they are at least first and second order smooth.
+
+In the first section we are in effect calculating the density altitude based on pressure altitude and outside air temperature. Lower temperatures result in shorter takeoff distances (air is more sense). Lower pressures also result in shorter takeoff distances.
+
+In the second section we are correcting for airplane weight. A lighter airplane takes off in less distance (less lift required).
+
+In the third section we are correcting for wind. A headwind reduces takeoff distance. A tailwind increases takeoff distance.
+
+I do not believe the borders of this chart to be regulatory. Certainly we can launch an airplane into a greater than 15 knot headwind, or even a 5 knot tailwind (not something I would want to do without quite a lot of runway). We should be able to take off at pressure altitudes above 7000 feet as well. But doing something off the borders of the chart would certainly give me pause.
+
+For the record, these numbers are extremely optimistic. The chart gives lift off speeds of 62-63 knots and obstacle clearing speeds of 62-65 knots, varying by weight in what now is the usual manner. But in my airplane we're not off until 73 knots at the earliest. That is a 15\% discrepancy. So I make sure to pad these numbers by 15\% in my own operations.
+
+The ground roll chart is largely identical to the prior chart. All of the prior discussion applies, including the caveats. The main difference is that we are calculating ground roll instead of distance over an obstacle.
+
+\subsection{Flaps Up Takeoff Performance and Ground Roll}
+
+This chart is the bread and butter of our operations. Most of our takeoffs will be normal. The discussion from the flaps second notch charts applies here as well.
+
+The liftoff speeds, once again, are optimistic. They say we will be off at 66-70 knots. I find that hilarious. N36262 doesn't want to fly until about 85 knots, you can't even pull it off the ground without some difficulty. That's a 25\% discrepancy, and I would add a 25\% ``fudge factor'' to these figures.
+
+\subsection{Gear Up and Gear Down Rate of Climb}
+
+This chart provides the climb performance of the airplane as a function of density altitude, engine fuel mixture, and airplane weight. The climb rate may be zero, or as great as 1700 feet per minute according tot his chart.
+
+To achieve these numbers, the provided configuration is: gear up or down, flaps up, mixture as noted, wide open throttle, maximum RPM of 2700, and $V_Y$, which is once again 92 (gear up) or 87 (gear down) knots indicated.
+
+These numbers are optimistic as well. They imply a 16,000 foot service ceiling for the airplane. That's very interesting as I saw a demonstrated service ceiling of 12,500 feet on an ISA+05 day, seeing about 50-100 feet per minute when we should have been seeing 200 according to this chart. So I would knock off 100 to 200 feet per minute - I would shift the entire right hand section of these charts over to the left a little bit.
+
+\subsection{Fuel, Distance, and Time to Climb}
+
+This chart estimates the fuel (in gallons), time (in minutes) and distance (in nautical miles) to achieve a particular density altitude. We collect data at the density altitude of takeoff, and of cruise, and take their difference to get our expected performance.
+
+As usual, these numbers are so optimistic as to be objectionable.
+
+
+
 
 
 
