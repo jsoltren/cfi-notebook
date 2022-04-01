@@ -89,7 +89,7 @@ The Lance's POH defines a number of speeds. These speeds are commonly defined fo
 
 In this section, we explore the Lance's V speeds. For each V speed, we consider the definition of the speed, what it means operationally, and how it varies with respect to aircraft weight, aircraft loading (nose or tail heavy), density altitude, aircraft configuration (flaps, landing gear), and aircrat attitude.
 
-The beginning of Section 4 
+The beginning of Section 4 of the POH provides many of these figures.
 
 Recall the weights and speeds variation formula, which we can derive from two different values of the lift formula. It is written here for stall speed but applies to many speeds in this section.
 
@@ -97,18 +97,70 @@ Recall the weights and speeds variation formula, which we can derive from two di
 V_S' = V_S \sqrt{\frac{New\ Weight}{Old\ Weight}}
 \end{equation}
 
-We can use this formula to calculate different speeds for a few different weights. I'll show values for 3600 lbs (max gross), 3200 lbs, 2800 lbs, and the airplane's minimum weight (with third row seats removed) of 2151 lbs as per the most recent POH.
+We can use this formula to calculate different speeds for a few different weights. I'll show values for 3600 lbs (max gross), 3200 lbs, 2800 lbs, 2400 lbs, and the airplane's minimum weight (with third row seats removed) of 2151 lbs as per the most recent POH.
 
-Here is a cheat sheet with all the V speeds: TODO.
+Here is a cheat sheet with all the V speeds at max gross weight.
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+    \hline
+    $V$ Speed & Value (KIAS) & Marking\\
+    \hline
+    \hline
+     $V_{SO}$ &  52 & Bottom of White Arc \\
+     $V_S$    &  53 & Bottom of Green Arc \\
+    \hline
+     $V_R$    &  87 & None \\
+    \hline
+     $V_X$    &  68-87 & None \\
+     $V_Y$    &  92    & None \\
+    \hline
+     $V_{FE}$ &  109 & Top of White Arc \\
+     $V_A$    &  132 & Placard \\
+    \hline
+     $V_{LO}$ &  106 & Placard \\
+     $V_{LE}$ &  129 & Placard \\
+    \hline
+     $V_{NO}$ &  150 & Bottom of Yellow Arc \\
+     $V_{NE}$ &  191 & Red Line \\
+    \hline
+\end{tabular}
+\end{center}
+\caption{V Speeds - P32T}
+\label{fig:VSpeedsP32T}
+\end{figure}
 
 \subsection{$V_{S}$ - Stalling Speed}
 
 52-53 KIAS.
 
-Variation Chart: TODO.
+Variation Chart: see Figure ~\ref{fig:StallSpeedsP32T}.
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{ |c|c| }
+    \hline
+    Weight & Stalling Speed \\
+    (pounds) & (KIAS) \\
+    \hline
+     3600 &  53 \\
+     3200 &  50 \\
+    \hline
+     2800 &  47 \\
+     2400 &  43 \\
+    \hline
+     2151 &  41 \\
+    \hline
+\end{tabular}
+\end{center}
+\caption{Stalling Speed Weight Variance - P32T}
+\label{fig:StallSpeedsP32T}
+\end{figure}
+
 
 \begin{itemize}
-\item Markings:
+\item Markings: Bottom of green arc for flaps up. Bottom of white arc for flaps down.
 \item Weight: a heavier airplane will require a higher angle of attack to fly and thus will have a higher stalling speed. A lighter airplane will have a lower stalling speed.
 \item Loading: a nose heavy airplane will have a higher stalling speed due to the high angle of attack required to keep the nose flying. Conversely, an aft loaded airplane will have a lower stalling speed. But according to Denker the effect is relatively small.
 \item Density Altitude: In thinner air, there is a greater discrepancy between indicated and calibrated airspeed. The airplane will stall at the same indicated airspeed but a higher true airspeed.  
@@ -121,12 +173,13 @@ Variation Chart: TODO.
 
 191 KIAS or 189 KCAS
 
-Variation Chart: TODO
+Variation Chart: None. This is an absolute value based on aerodynamic pressure, measured with the pitot tube. The wings and tail can crumple at any weight.
+
 \begin{itemize}
-\item Markings: TODO
-\item Weight: TODO
-\item Loading: TODO
-\item Density Altitude: TODO
+\item Markings: Top of the yellow arc on the airspeed indicator. Red line on same indicator.
+\item Weight: No factor.
+\item Loading: No factor.
+\item Density Altitude: Will occur at a higher true airspeed, but same indicated airspeed, at high density altitude.
 \item Configuration: TODO
 \item Attitude: TODO
 \end{itemize}
@@ -135,7 +188,8 @@ Variation Chart: TODO
 
 150 KIAS or 150 KCAS
 
-Variation Chart: TODO
+Variation Chart: None. This is an absolute value based on aerodynamic pressure, measured with the pitot tube. The wings and tail can crumple at speeds beyond this in turbulence due to momentary increases in load factor. Operations in this region, including descents, are approved in smooth air. Proceed with caution!
+
 \begin{itemize}
 \item Markings: TODO
 \item Weight: TODO
@@ -149,7 +203,33 @@ Variation Chart: TODO
 
 132 KIAS or KCAS at max gross weight. Also ``Turbulent Air Operating Speed''.
 
-Variation Chart: TODO
+Variation Chart: Per POH, use linear interpolation to get $V_A$ at various weights. See Figure ~\ref{fig:MAneuveringSpeedsP32T}.
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{ |c|c| }
+    \hline
+    Gross Weight & Maneuvering Speed \\
+    (pounds) & (KIAS) \\
+    \hline
+     3600 &  132 \\
+     3400 &  129 \\
+    \hline
+     3200 &  126 \\
+     3000 &  123 \\
+    \hline
+     2800 &  120 \\
+     2600 &  117 \\
+    \hline
+     2400 &  115 \\
+     2151 &  112 \\
+    \hline
+\end{tabular}
+\end{center}
+\caption{Maneivering Speed Weight Variance - P32T}
+\label{fig:ManeuveringSpeedsP32T}
+\end{figure}
+
 \begin{itemize}
 \item Markings: Placarded for max gross weight.
 \item Weight: TODO
@@ -163,7 +243,8 @@ Variation Chart: TODO
 
 109 KIAS or KCAS
 
-Variation Chart: TODO
+Variation Chart: None. This is a structural limitation.
+
 \begin{itemize}
 \item Markings: TODO
 \item Weight: TODO
@@ -177,7 +258,8 @@ Variation Chart: TODO
 
 129 KIAS or 130 KCAS
 
-Variation Chart: TODO
+Variation Chart: None. This is a structural limitation.
+
 \begin{itemize}
 \item Markings: TODO
 \item Weight: TODO
@@ -191,7 +273,8 @@ Variation Chart: TODO
 
 106 KIAS or 109 KCAS
 
-Variation Chart: TODO
+Variation Chart: None. This is a structural limitation.
+
 \begin{itemize}
 \item Markings: TODO
 \item Weight: TODO
@@ -205,7 +288,8 @@ Variation Chart: TODO
 
 129 KIAS or 130 KCAS
 
-Variation Chart: TODO
+Variation Chart: None. This is a structural limitation.
+
 \begin{itemize}
 \item Markings: TODO
 \item Weight: TODO
@@ -219,7 +303,8 @@ Variation Chart: TODO
 
 150 KIAS to 191 KIAS
 
-Variation Chart: TODO
+Variation Chart: None. See prior discussion of $V_{NO}$.
+
 \begin{itemize}
 \item Markings: TODO
 \item Weight: TODO
@@ -233,7 +318,50 @@ Variation Chart: TODO
 
 87 KIAS (gear down, flaps up) to 92 KIAS (gear up, flaps up)
 
-Variation Chart: TODO
+Variation Chart: Yes. As this is a speed derived from the power curve, it is subject to translations and scalings of the power curve based on gross weight and configuration. See Figure ~\ref{fig:VYCleanP32T} for the clean configuration and ~\ref{fig:VYDirtyP32T} for the dirty configuration. I consider these speeds to be optimistic and generally add 2-3 knots.
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{ |c|c| }
+    \hline
+    Weight & Stalling Speed \\
+    (pounds) & (KIAS) \\
+    \hline
+     3600 &  92 \\
+     3200 &  87 \\
+    \hline
+     2800 &  81 \\
+     2400 &  75 \\
+    \hline
+     2151 &  71 \\
+    \hline
+\end{tabular}
+\end{center}
+\caption{Best Rate of Climb Speed Weight Variance, Clean - P32T}
+\label{fig:VYCleanP32T}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{ |c|c| }
+    \hline
+    Weight & Stalling Speed \\
+    (pounds) & (KIAS) \\
+    \hline
+     3600 &  87 \\
+     3200 &  82 \\
+    \hline
+     2800 &  77 \\
+     2400 &  71 \\
+    \hline
+     2151 &  67 \\
+    \hline
+\end{tabular}
+\end{center}
+\caption{Best Rate of Climb Speed Weight Variance, Dirty - P32T}
+\label{fig:VYDirtyP32T}
+\end{figure}
+
 \begin{itemize}
 \item Markings: TODO
 \item Weight: TODO
@@ -247,7 +375,50 @@ Variation Chart: TODO
 
 68 KIAS (gear down, flaps up) to 87 KIAS (gear up, flaps up)
 
-Variation Chart: TODO
+Variation Chart: Yes. As this is a speed derived from the power curve, it is subject to translations and scalings of the power curve based on gross weight and configuration. See Figure ~\ref{fig:VXCleanP32T} for the clean configuration and ~\ref{fig:VXDirtyP32T} for the dirty configuration. I consider these speeds to be optimistic and generally add 2-3 knots.
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{ |c|c| }
+    \hline
+    Weight & Stalling Speed \\
+    (pounds) & (KIAS) \\
+    \hline
+     3600 &  87 \\
+     3200 &  82 \\
+    \hline
+     2800 &  77 \\
+     2400 &  71 \\
+    \hline
+     2151 &  67 \\
+    \hline
+\end{tabular}
+\end{center}
+\caption{Best Angle of Climb Speed Weight Variance, Clean - P32T}
+\label{fig:VXCleanP32T}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{ |c|c| }
+    \hline
+    Weight & Stalling Speed \\
+    (pounds) & (KIAS) \\
+    \hline
+     3600 &  68 \\
+     3200 &  64 \\
+    \hline
+     2800 &  60 \\
+     2400 &  56 \\
+    \hline
+     2151 &  53 \\
+    \hline
+\end{tabular}
+\end{center}
+\caption{Best Angle of Climb Speed Weight Variance, Dirty - P32T}
+\label{fig:VXDirtyP32T}
+\end{figure}
+
 \begin{itemize}
 \item Markings: TODO
 \item Weight: TODO
@@ -275,7 +446,8 @@ Variation Chart: TODO
 
 17 knots.
 
-Variation Chart: TODO
+Variation Chart: None.
+
 \begin{itemize}
 \item Markings: TODO
 \item Weight: TODO
