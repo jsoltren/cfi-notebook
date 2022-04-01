@@ -9,7 +9,7 @@ bibliography:
 	biber notebook
 
 notebook.toc :
-	$(PDFLATEX) notebook.tex
+	$(TEX) notebook.tex
 
 notebook.pdf : resources/* notebook.toc bibliography
 	$(PDFLATEX) notebook.tex
