@@ -82,6 +82,45 @@ The procedure to derive this curve is as follows:
 \item Shift the curve up for power. Realize that, since the airplane is lighter, the curve will shift by a greater amount.
 \end{enumerate}
 
+\section{Center of Gravity and Performance}
+
+There are some truths that the private pilot is expected to know about not only how the weight of the airplane affects performance, but also how the center of gravity affects performance.
+
+First we can build some intuition. Fold a paper airplane (technically an ``origami glider''). Go ahead, I'll wait. Now fly it. Observe how it flies. No wrong or right here, just observe the behavior. We'll use this as a baseline.
+
+Now take a paper clip and clip it to the nose. Fly it again. What changes? It's a bit more stable - it wants to fly where we throw it. But it wants to nose down and stops flying at a lower speed. We can make it fly further by bending some tabs in the back.
+
+Now take the paper clip, remove it from the nose, and clip it to the tail. Fly it a third time. What happens? Does it even fly at all? Probably not.
+
+These are the extremes. If we flew a real airplane this nose or tail heavy it would be bad news indeed. But the same truths apply.
+
+A nose heavy airplane is more stable. Why? For the same reason a tightrope walker is more stable holding a stabilizing rod: distribution of weight. The larger arm between the center of gravity (or center of mass - we use the terms equivalently) and the center of pressure means that the weight can act in a more nuanced fashion. The elevator (on a normal airplane with a normal empennage, not some Burt Rutan designed contraption) has to fly heavier to counteract the nose heaviness, which means it has more authority.
+
+With the nose being heavy, the nose wants to keep falling over. We eat into our angle of attack budget because we need to fight to keep the nose up with elevator trim and angle of attack - just like we saw on our paper glider earlier.
+
+The thing about flying with a higher angle of attack is that it increases our drag in all regimes. It increases our induced drag because the plane has to generate more lift at lower speeds. It increases our parasite drag because the frontal area of a wing at a higher angle of attack is greater.
+
+If we take a look at the usual form of the lift/drag diagram - the one out of the testing supplement - some truths about stalling speed and cruise speed become pretty obvious. (But it took ten years for me to think of it this way...)
+
+Compare power available and power required (sum total of induced and parasite drag).
+
+\includegraphics[width=\linewidth]{power-required-available}
+
+Image borrowed from \url{http://airsoc.com/articles/view/id/59acd2623d2d2ebb7e8b4567/behind-the-power-curve} until I make a better one.
+
+This is a different view of the power curve. This form is nice because the stalling and cruising speed of the airplane fall out nicely. They are the places where the red and blue curves intersect. The intersection point on the left is the stalling speed. The intersection point on the right is max cruise.
+
+So what does the higher angle of attack required for a nose heavy airplane do? It moves the red curve UP. What happens to the points? They move \emph{closer together}.
+
+A nose heavy airplane has a \emph{higher} stall speed and a \emph{lower} cruise speed. It is more stable.
+
+Now. What happens to $V_Y$, our best climb speed? It so happens this speed is at $L/D_{max}$, the maximum lift over drag speed. Translating a curve up or down doesn't change that point. So $V_Y$ is \emph{unchanged}.
+
+The converse is true for an aft heavy airplane: lower stall speed (!), higher cruise speed, lower angle of attack, less stable. The red curve moves DOWN.
+
+If we look at the sort of spiral shaped view of the power curve we'd been looking at, a really high angle of attack from a nose heavy airplane would compress the curve about its best rate of climb. So what does this do to $V_X$? Well, recall that we had this clever tangent line definition of $V_X$ erarlier. If we compress the curve, that tangent point \emph{necessarily} moves to the left - as does \emph{every} point on the ``back of the power curve''! So $V_X$ will increase. Slightly.
+
+
 
 \section{V Speeds for the Lance}
 
@@ -366,10 +405,11 @@ Variation Chart: Yes. As this is a speed derived from the power curve, it is sub
 \item Markings: TODO
 \item Weight: A higher weight causes a higher angle of attack and leaves less power available resulting in a higher best rate of climb speed.
 Variation Chart: TODO
-\item Loading: Slight variation. A nose heavy airplane will have higher induced drag and require more airspeed to overcome this greater induced drag, perhaps accounting for the 2-3 knots increase that I observe in my normally nose heavy airplane over book numbers. The POH provides a hint concerning takeoff performance for nose heavy CGs forward of 85 inches.
+\item Loading: No variation. None! A nose heavy airplane will have higher induced drag and require more power to overcome this greater induced drag.
+The POH provides a hint concerning takeoff performance for nose heavy CGs forward of 85 inches. This increase is due to the gadded drag of the nose heavy airplane.
 \item Density Altitude: TODO
 \item Configuration: TODO
-\item Attitude: TODO
+\item Attitude: None. Attitude follows takeoff configuration, not the other way around. Fly coordinated now.
 \end{itemize}
 
 \subsection{$V_X$ - Best Angle of Climb Speed}
@@ -421,12 +461,12 @@ Variation Chart: Yes. As this is a speed derived from the power curve, it is sub
 \end{figure}
 
 \begin{itemize}
-\item Markings: TODO
-\item Weight: TODO
-\item Loading: TODO
+\item Markings: None.
+\item Weight: A lighter airplane has a lower $V_X$. A heavier airplane has a higher $V_X$. See previous discussion.
+\item Loading: A nose heavy airplane has a slightly higher $V_X$. See previous discussion.
 \item Density Altitude: TODO
 \item Configuration: TODO
-\item Attitude: TODO
+\item Attitude: None. Attitude follows takeoff configuration, not the other way around. Fly coordinated now.
 \end{itemize}
 
 \subsection{Landing Final Approach Speed, Full Flaps}
