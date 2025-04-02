@@ -179,4 +179,137 @@ The descending blade produces more thrust than the ascending blade. The descendi
 a longer moment arm (A2) than on the left engine (A1). This produces greater asymmetric thrust when the right
 engine is operating than when the left engine is operating.
 
-\includegraphics[width=\linewidth]{pfactor}
+\begin{center}
+\includegraphics[width=0.9\linewidth]{pfactor}
+\end{center}
+
+\subsubsection{Accelerated Slipstream}
+
+The loss of induced airflow created by the propeller over the dead engine wing results in a
+loss of lift on that wing. This loss of lift causes a roll towards the dead engine and will
+require additional aileron deflection into the operating engine. Due to P-factor, the
+accelerated slipstream of the right engine has a longer moment-arm (A2) than the left
+engine (A1) because the descending (greater-thrust) propeller blade is outboard.
+
+\begin{center}
+\includegraphics[width=0.5\linewidth]{accel1}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.5\linewidth]{accel2}
+\end{center}
+
+\subsubsection{Spiraling Slipstream}
+
+Both engines produce spiraling slipstreams, but the left engine’s spiraling slipstream is directed towards the rudder, making it more effective. The right engine’s spiraling slipstream is directed away from the rudder. In the event of
+left engine failure, the rudder becomes less effective due to the loss of the critical engine’s spiraling slipstream.
+Therefore, with critical engine failure maintaining directional control requires more rudder authority.
+
+\begin{center}
+\includegraphics[width=0.5\linewidth]{spiraling}
+\end{center}
+
+\subsubsection{Torque}
+
+Torque is the opposite reaction to the clockwise turning of the propellers. Both engines produce a rolling tendency
+to the left. With the right engine operating (critical engine inoperative), torque adds to the yaw/roll produced by
+asymmetric thrust. With the left engine operating, torque counteracts the yaw/roll produced by asymmetric thrust.
+
+\begin{center}
+\includegraphics[width=0.9\linewidth]{torque}
+\end{center}
+
+\subsection{$V_{MC}$}
+
+\vmc is defined as the minimum speed at which you can maintain directional control
+with ithe sudden loss of the critical engine. The actual speed at which you will
+lose directional control will vary depending on conditions on a
+given day. The \emph{published \vmc airspeed} is dictated by a set of conditions in
+14 CFR (FAR) 23.149. \vmc is marked with a \textbf{\textcolor{red}{red line}} on the airspeed indicator.
+For the Duchess, this airspeed is \textcolor{red}{65 KIAS}.
+
+On August 30, 2017, a substantial rewrite of 14 CFR (FAR) 23 went into effect. This
+rewrite eliminated 23.149 from the current regulations. However, it remains the
+certification basis for many of the light piston twin airplanes we fly today. For
+light twins certificated under the new Part 23, such as the Tecnam P2006, we would
+see similar requirements under 14 CFR (FAR) 23.2xxx. Since this document focuses on
+the Duchess, we restrict our discussion to the ``old'' 14 CFR (FAR) 23, which is
+archived on ecfr.gov.
+
+\subsection{Determination of $V_{MC}$}
+
+Under the ``old'' 14 CFR Part 23, manufactures of multiengine aircraft were required to demonstrate and publish a \vmc
+(minimum control airspeed) under the following specific conditions, which are either set for Standardization (S), or are the Worst Case (W):
+
+\vbox{%
+\begin{enumerate}
+    \item \textbf{Standard Day} (S) (15\degree C and 29.92" at sea level)
+    \item \textbf{Maximum sea level takeoff weight} (S)
+    \item \textbf{The most rearward allowable center of gravity} (W)
+    \item \textbf{The critical engine failed} (W) and the propeller is
+        \begin{enumerate}
+            \item Windmilling, or
+            \item Feathered, if the aircraft has an auto feather system (rare in light twins)
+        \end{enumerate}
+    \item \textbf{Takeoff at maximum available power on the good engine} (W)
+    \item \textbf{Landing gear up} (W)
+    \item \textbf{Flaps in the takeoff position} (S)
+    \item \textbf{No more than 5\degree{} of bank into the good engine} (S)
+\end{enumerate}}
+
+A further factor is the pilot ability, Part 23 states that recovery from loss of directional
+control at \vmc should not require more than average pilot technique and the recovery should
+be accomplished within 20\degree{} of original heading.
+
+Apart from the 5\degree{} bank, max gross weight, standard day, and flaps, the remaining factors
+are all worst case, and they lead to the highest \vmc to be published by the manufacturer
+(65 KIAS for the Duchess), or are related to the takeoff scenario.
+
+When considering \vmc, realize that lower \vmc is better. Anything that lowers \vmc
+will increase controllability at lower airspeed, giving more margin for error in
+single-engine operation.
+
+\subsubsection{Conditions that the FAA Requires for Published \vmc (14 CFR 23.149)}
+
+What follows is a list of conditions required to be met by manufacturers in
+determining the published \vmc value for certification. Understanding the
+regulatory criteria is important for understanding how existing conditions and
+aircraft control influence single-engine controllability.
+
+The conditions required for certification represent the worst-case scenario
+for controllability: an engine failure shortly after takeoff, with the
+aircraft in the climb-out configuration. However, not every condition required for
+certification is necessarily worst-case (W); some conditions are specified primarily
+for standardization purposes (S).
+
+\subsubsection{Standard conditions (ISA: 15\degree C and 29.92” Hg) (Standardization)}
+
+\vmc decreases with increase density altitude. Any condition that decreases
+power on the operating engine such as increased altitude, low air density or
+high temperature will in turn mean less thrust, which creates less yaw, so \vmc
+will decrease. The opposite is also true for any condition that increases power,
+such as lower altitude, high density or low temperature, which will increase \vmc.
+
+\emph{Memory aid: Hot = Good}
+
+\subsubsection{Maximum sea-level power on operating engine (Worst case)}
+
+Maximum power on the good engine increases \vmc due to increased asymmetric thrust.
+
+\subsubsection{Critical engine windmilling or auto-feathered if installed (Worst case)}
+
+The windmilling propeller creates drag, which is asymmetric. Therefore, more rudder
+authority will be required to offset this asymmetric drag. \vmc is higher
+with a windmilling propeller on the inoperative engine.
+
+\subsubsection{Landing gear retracted (Worst case)}
+
+The gear and gear doors extended tend to act like keels on a boat and resist rolling and yawing tendencies by
+shifting the center of gravity down the vertical axis of the airplane. Additionally, on a tricycle-gear airplane, the
+main gear are located aft of the center of gravity and produce stabilizing drag when extended, like a drag chute
+would. \vmc is lower with gear down.
+
+
+
+
+
