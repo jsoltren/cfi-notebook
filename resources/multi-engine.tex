@@ -1,4 +1,9 @@
-\chapter{Multi Engine Airplanes}
+% Define some commonly used terms.
+% We did include xcolor, didn't we?
+\newcommand{\vyse}{\textcolor{blue}{$V_{yse}$ }}
+\newcommand{\vmc}{\textcolor{red}{$V_{mc}$ }}
+
+\chapter*{Multi Engine Airplanes: An Introduction}
 
 Do you want to fly the ``big iron''? Are you looking for more performance, capability,
 and reliability? Do you enjoy engine management (and maintenance) so much that you want to
@@ -8,10 +13,17 @@ This chapter is meant to prepare the prospective multi engine pilot or instructo
 fun that is to come.
 
 The material in this section is based upon FAA resources, as well as the Multiengine Manual
-that Pilot's Choice Aviation in Georgetown, TX distributes to incoming multi engine students.
-Credit is due to Beth Ann Jenkins and Stephanie LASTNAME for their substantial comtributions.
+that Pilot's Choice Aviation (PCA) in Georgetown, TX distributes to incoming multi engine students.
+This document could not exist without Beth Ann Jenkins and Stephanie Fernihough, the authors of the
+2017 PCA Multiengine Manual and some notes beyond it.
 
-\section{Disclaimer}
+The Multiengine Manual was reformatted into \LaTeX{} in Spring of 2025. At that time, it was
+updated to reflect eight years of students successfully using this document to become multi
+engine pilots. It also reflects the latest FAA testing documents as of this writing.
+
+This Manual focused on the Beechcraft Duchess BE76, the primary multi engine trainer used at PCA.
+
+\section*{Disclaimer}
 
 The information contained in this publication is subject to change.
 
@@ -21,5 +33,77 @@ publications should be referred to for any critical information.
 The information in this manual is to be utilized for training purposes only. Always
 refer to your aircraft's POH, AFM, and other certified documentation before flight!
 
-\section{Single Engine Aerodymanics}
+\chapter{Single Engine Aerodymanics}
+
+%Keep it above \vyse or bad things happen.
+%Keep it above \vmc or really bad things happen.
+
+With a few exceptions, flying a multiengine airplane in normal operations is similar to flying a
+complex single. Most of the differences between single-engine and multi-engine flying relate to
+emergency situations. Specifically, we are concerned with the airplane’s flight characteristics
+when only one engine is fully operating.
+
+The discussion to follow will focus on two key elements of multi-engine flying: performance and controllability.
+
+Note: \emph{performance} and \emph{controllability} are complementary. As one increases, the other decreases, and vice versa.
+
+\section{The Engine-Inoperative Condition}
+
+\subsection{Asymmetric Thrust}
+
+Engines on conventional twins are mounted on the wings. Unlike a single-engine airplane, the engine thrust is not
+directed along the longitudinal axis of the airplane. Rather, each engine’s thrust produces a moment that attempts to
+yaw the airplane around its vertical axis. On the Duchess (one counter-rotating prop) when both engines are
+producing equal thrust, these moments balance each other out and the net thrust has no yawing moment. When one
+engine is at reduced or zero thrust, there is a net yawing moment that will lead to a loss of directional control if not
+counteracted.
+
+Just like in a single, yawing moments (such as propeller left-turning tendencies in a climb) are counteracted with
+rudder. When an engine fails in a multi-engine airplane, the yaw that occurs must be balanced out with enough
+rudder pressure to keep the airplane straight. Rudder effectiveness is a function of airspeed – more air flowing over
+the rudder airfoil gives it the ability to produce more horizontal lift.
+
+\subsection{Accelerated Slipstream}
+
+Because the engines on a conventional twin are wing-mounted, additional lift is produced by the accelerated
+slipstream of the propeller wash over the wing surface. The loss of thrust on one wing results in a loss of lift on that
+wing which produces an imbalance of lift between the two wings, leading to a rolling moment toward the
+inoperative engine. This rolling tendency must be counteracted with aileron deflection.
+
+\subsection{Summary}
+
+Because of the above listed factors (asymmetric thrust and accelerated slipstream), both produced by the operating
+engine, there is a tendency for the airplane to \emph{both} roll \emph{and} yaw into the inoperative engine!
+
+\section{Engine-Inoperative Performance}
+
+\subsection{Loss of Horsepower}
+
+A common misconception is that with one engine out, a twin will have half the climb performance
+that it would with both engines. In reality, for aircraft with a maximum gross weight of less than
+6,000 pounds, there is no
+requirement that they be capable of level flight or climb for \emph{any} weight or flight condition! The only requirement is
+that the rate of climb or descent be determined. Many light twins are not capable of holding altitude with one engine.
+
+The Duchess has two 180-HP engines for a total of 360 HP, and requires about 140 HP to maintain level flight.
+Losing one engine drastically cuts the horsepower available for climb performance:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cl}
+\textbf{360}   & \textbf{total HP available}            \\
+\textbf{(140)} & \textbf{HP for level flight}           \\ \hline
+\textbf{220}   & \textbf{HP left for climb performance} \\
+\textbf{(180)} & \textbf{HP -- loss of an engine}       \\ \hline
+\textbf{40}    & \textbf{HP now available for climb}
+\end{tabular}
+\caption{Single engine performance for the Duchess.}
+\end{table}
+
+This means we now have only approximately 20\% (40/220) climb performance remaining. In addition,
+it should be
+stressed that the airplane must be cleaned up to climb. Anything that creates drag will
+require additional horsepower
+and will decrease the airplane’s climb performance.
+
 
