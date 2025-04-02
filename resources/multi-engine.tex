@@ -2,8 +2,9 @@
 % We did include xcolor, didn't we?
 \newcommand{\vyse}{\textcolor{blue}{$V_{yse}$ }}
 \newcommand{\vmc}{\textcolor{red}{$V_{mc}$ }}
+\newcommand{\vxse}{$V_{xse}$ }
 
-\chapter*{Multi Engine Airplanes: An Introduction}
+\chapter*{Multi Engine Airplanes:\\An Introduction}
 
 Do you want to fly the ``big iron''? Are you looking for more performance, capability,
 and reliability? Do you enjoy engine management (and maintenance) so much that you want to
@@ -106,4 +107,76 @@ stressed that the airplane must be cleaned up to climb. Anything that creates dr
 require additional horsepower
 and will decrease the airplane’s climb performance.
 
+Further, realize that 180 HP is the rated horsepower for sea-level standard conditions. Depending on density altitude
+(pressure altitude and temperature) effective horsepower may be less than 180 HP. This means that you 
+\emph{may not be able to maintain altitude with only one engine}. Maintaining \vyse (blue line) will give you a best rate of climb or the
+least rate of descent.
 
+\subsection{\vyse (\textcolor{blue}{Blue Line})}
+
+
+\vyse is the maximum rate of climb (or minimum rate of sink) airspeed for a single-engine configuration.
+It represents
+the maximum lift over drag ratio ($L/D_{max}$) with one engine operating, and may be likened to the best glide speed in a
+single-engine airplane. At slower airspeeds, induced drag becomes more prominent. At faster speeds, parasite drag
+becomes more prominent.
+
+\vyse is the minimum speed to use during all phases of flight and is to be exceeded until committed to land on short
+final. \vyse is the minimum speed above which you can commit to a continued takeoff. \vyse is the minimum speed to
+use during emergencies involving an engine failure. \vyse is marked by a \textcolor{blue}{Blue Line} on the airspeed indicator (85
+KIAS on the Duchess).
+
+\subsection{Drag Factors}
+
+With one engine inoperative, several factors will determine whether or not you'll be able to maintain altitude, climb
+or descend. These drag factors increase the horsepower required for level flight, and eat into the excess horsepower
+which could be used for climb. All figures are approximate and will vary with density altitude:
+
+\vbox{%
+\begin{enumerate}
+    \item Not at \vyse -- High or low by 5 knots: \textbf{100 fpm descent}
+    \item Gear Down: \textbf{250 fpm descent}
+    \item Full Flaps: \textbf{350 fpm descent} (flaps @ 20 = 150 fpm descent)
+    \item Critical engine windmilling: \textbf{300 fpm descent}
+\end{enumerate}}
+
+Single engine goarounds may be impossible and \textbf{shall not be attempted with flap settings beyond 20 degrees}.
+
+Each twin has a single engine service ceiling and an absolute single engine ceiling:
+
+\begin{itemize}
+\item The \textbf{single-engine service ceiling} (Duchess: 6000 ft @ ISA) is the maximum \emph{density altitude} the airplane can sustain a 50 fpm climb with max power on the good engine in the clean configuration.
+\item The \textbf{single-engine absolute ceiling} (Duchess: approximately 7800 ft @ ISA) is the maximum \emph{density altitude} the airplane can maintain on one engine with max power in the clean configuration. This is also the altitude where \vyse
+and \vxse meet.
+\end{itemize}
+
+\subsection{Engine-Inoperative Controllability}
+
+In a single-engine airplane, keeping the aircraft under control (avoiding a stall) is critical. Even if performance is
+below that required to maintain level flight, we accept a descent and a controlled landing rather than try to hold off
+the descent and get into a stall/spin situation. While stalls are a concern in multi-engine aircraft, another important
+consideration is the possible loss of directional control if airspeed is not managed correctly.
+
+With all this in mind, it can be said that the battle for controllability is one between engine and rudder. Anything
+that increases the difference in thrust between the two engines will decrease controllability, and anything that makes
+the rudder more able to counteract the thrust difference will increase controllability.
+
+\subsection{Critical Engine and Critical Engine Factors}
+
+The critical engine is the engine whose failure most adversely affects the performance and controllability of the
+airplane. In general, one of the engines will have a larger yaw moment and the airspeed needs to be higher in order
+to balance it out. When the airplane has counter-rotating props (such as the Duchess) there is no critical engine. On
+most twins, both propellers rotate clockwise when viewed from the cockpit. On these aircraft, the left engine is
+critical. The reasons for this are explained below.
+
+The following discussion assumes a conventional light twin, with two clockwise-rotating propellers. On such
+airplanes, the critical engine is the left engine, because the left-turning tendencies of the right engine add to its
+asymmetric thrust. The left turning tendencies are discussed below. (PAST)
+
+\subsubsection{P factor}
+
+The descending blade produces more thrust than the ascending blade. The descending blade on the right engine has
+a longer moment arm (A2) than on the left engine (A1). This produces greater asymmetric thrust when the right
+engine is operating than when the left engine is operating.
+
+\includegraphics[width=\linewidth]{pfactor}
