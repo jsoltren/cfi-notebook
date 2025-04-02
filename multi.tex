@@ -1,0 +1,94 @@
+\documentclass[11pt,twoside,letterpaper,onecolumn]{report}
+%\documentclass[11pt,twoside,letterpaper,twocolumn]{report}
+
+\usepackage{parskip}
+
+%\usepackage{stix} % Use the STIX fonts
+
+%\usepackage{fourier} % Utopia font
+
+% Use EB-Garamond fonts. Doesn't play nicely with Github's PDF preview so disable for now.
+%\usepackage[cmintegrals,cmbraces]{newtxmath}
+%\usepackage{ebgaramond-maths}
+%\usepackage[T1]{fontenc}
+
+
+\usepackage[backend=biber]{biblatex}
+%\usepackage{biblatex}
+\addbibresource{notebook.bib}
+
+\usepackage{xurl}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={MEII Notebook},
+    pdfpagemode=FullScreen,
+}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% Dedication
+% https://tex.stackexchange.com/questions/102830/dedication-page-in-article-class
+%\usepackage[paper=letterpaper,left=30mm,right=30mm,top=40mm,bottom=40mm]{geometry}
+\usepackage[paper=letterpaper,left=15mm,right=15mm,top=15mm,bottom=25mm]{geometry}
+\newenvironment{dedication}
+  {\clearpage           % we want a new page
+   \thispagestyle{empty}% no header and footer
+   \vspace*{\stretch{1}}% some space at the top
+   \itshape             % the text is in italics
+   \raggedleft          % flush to the right margin
+  }
+  {\par % end the paragraph
+   \vspace{\stretch{3}} % space at bottom is three times that at the top
+   \clearpage           % finish off the page
+  }
+
+
+\author{Jos\'e Hiram Soltren}
+\title{MEI Notebook}
+\begin{document}
+
+%\maketitle
+
+% https://www.latextemplates.com/template/vertical-line-title-page
+
+\begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
+
+\raggedleft % Right align the title page
+\rule{1pt}{\textheight} % Vertical line
+\hspace{0.05\textwidth} % Whitespace between the vertical line and title page text
+\parbox[b]{0.75\textwidth}{ % Paragraph box for holding the title page text, adjust the width to move the title page left or right on the page
+{\Huge\bfseries CFI Notebook}\\[2\baselineskip] % Title
+{\large\textit{Reference notes for the private, commercial, and \\
+    airline transport multi-engine pilot and instructor}}\\[4\baselineskip] % Subtitle or further description
+{\Large\textsc{jos\'e hiram soltren}} % Author name, lower case for consistent small caps
+
+\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+
+{\noindent Soltren Consulting LLC}\\[\baselineskip] % Publisher and logo
+{\noindent \today }\\[\baselineskip] % Publisher and logo
+}
+
+\end{titlepage}
+
+\begin{dedication}
+For Zo\"e, Sebastian, and Malcolm, who hopefully find\\
+as much inspiration from me as I do from them.\\
+I hope they learn to fly one day too.
+\end{dedication}
+
+%\input{resources/introduction.tex}
+%\pagebreak
+%\input{resources/acknowledgements.tex}
+
+\tableofcontents
+
+\input{resources/multi-engine.tex}
+
+\printbibliography
+
+\end{document}
