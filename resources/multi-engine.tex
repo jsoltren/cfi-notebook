@@ -6,6 +6,10 @@
 
 \chapter*{Multi Engine Airplanes:\\An Introduction}
 
+\begin{center}
+\includegraphics[width=0.9\linewidth]{pca-logo}
+\end{center}
+
 Do you want to fly the ``big iron''? Are you looking for more performance, capability,
 and reliability? Do you enjoy engine management (and maintenance) so much that you want to
 double the fun? If so, the multi engine airplane is for you.
@@ -306,8 +310,143 @@ with a windmilling propeller on the inoperative engine.
 
 The gear and gear doors extended tend to act like keels on a boat and resist rolling and yawing tendencies by
 shifting the center of gravity down the vertical axis of the airplane. Additionally, on a tricycle-gear airplane, the
-main gear are located aft of the center of gravity and produce stabilizing drag when extended, like a drag chute
-would. \vmc is lower with gear down.
+main gear are located aft of the center of gravity and produce \emph{stabilizing drag} when extended, like a drag chute
+would. \vmc is \emph{lower with gear down}.
+
+\subsubsection{Flaps in the takeoff configuration (Standardization)}
+
+A number of considerations determine the relationship between flap setting and \vmc. With flaps extended a lesser
+angle of attack is necessary to produce the same amount of lift. Therefore, P-factor is less as well as yaw.
+Additionally, flaps increase drag aft of the C.G., providing a stabilizing effect. However, deploying flaps creates
+additional lift on the wing with the operating engine since lift increases with the same airspeed. Therefore it is not
+straightforward to say that \vmc changes one way or the other with flaps deployed, and this relationship may vary
+depending on the airplane.
+
+The Duchess procedures call for flaps fully retracted for takeoff.
+
+\subsubsection{Maximum 5\degree{} bank into good engine (Standardization)}
+
+The maximum bank allowed by the regulations for \vmc determination is five degrees. Any sideslip toward the good
+engine increases controllability due to increased rudder effectiveness – the sideslip results in weathervaning
+tendencies toward the operating engine. Likewise, sideslip toward the inoperative engine decreases controllability
+by introducing a weathervaning moment away from the operating engine. Specifying a maximum of five degrees
+limits the manufacturers to a realistic bank angle.
+
+It should be remembered that a bank angle of three degrees towards the good engine with the ball 1/2 off-center
+results in minimum drag and maximum climb. Five degrees of bank towards the good engine actually results in a
+sideslip toward the good engine, increasing drag but increasing controllability.
+
+\subsubsection{Maximum gross weight (Standardization)}
+
+\vmc is determined at max gross weight. Primarily this is a reference point for standardization purposes.
+
+When the airplane is banked, a sideslip occurs because a component of weight is acting along the wing (similar to
+the idea of a wing-down crosswind approach). The spanwise component of weight and sideslip is greater at a higher
+weight than a lower weight. Because of this, when the airplane is banked into the operative engine beyond the
+zero-sideslip angle, \vmc increases with the decrease in weight, and vice versa.
+
+\emph{Memory aid: Weight increases side slip effectiveness and lowers \vmc.}
+
+\subsubsection{Most adverse CG (usually aft legal CG limit) (Worst case)}
+
+As the CG moves aft, the moment arm between the rudder and C.G. is shortened, producing less leverage for the
+rudder. The further aft the C.G., the more rudder authority is required to offset the asymmetric thrust, requiring
+greater airspeed. \vmc is higher with an aft C.G.
+
+\subsubsection{Ground effect negligible (Worst case)}
+
+In ground effect there is a reduction in induced drag, so if an engine failure should occur while in ground effect a
+lower than normal angle of attack would be required to create the same amount of lift as when out of ground effect.
+A lower angle of attack would decrease the effect of P-factor, reduce yaw, and lower \vmc. Operating out of ground
+effect results in a higher \vmc than in ground effect.
+
+\begin{center}
+\includegraphics[width=0.9\linewidth]{vmc-conditions}
+\end{center}
+
+\emph{Memory aid: Any increase in yaw or decrease in rudder authority \textbf{increases} \vmc!}
+
+\emph{Memory aid: In the least favorable (aft) CG, the arm to the rudder is reduced, so the rudder is less effective.}
+
+\section{Altitude vs. $V_{MC}$ and Stall Speed}
+
+As density altitude increases, \vmc will decrease due to less power output from the operating engine (you'll lose
+directional control at a slower airspeed). Indicated stall speed remains relatively constant for all density altitudes.
+Thus, it is easily possible for \vmc to be lower than stall speed. When this happens a possible spin could develop
+during \vmc demonstrations or during other single-engine operation, real or simulated.
+
+If loss of directional control occurs during single-engine operation, \textbf{IMMEDIATELY} reduce power on the good
+engine and lower the nose to regain airspeed.
+
+\begin{center}
+\includegraphics[width=0.8\linewidth]{vmc-stall}
+\end{center}
+
+\section{The Zero-Sideslip Condition}
+
+As previously stated, a twin with only one engine operating must counteract the yaw and roll produced by
+asymmetric thrust with rudder and aileron. The asymmetric thrust and the \textbf{horizontal lift} produced by the rudder
+result in a net sideslip toward the \textbf{inoperative} engine when the wings of the airplane are held level,
+causing a turn \emph{away} from the operating engine. This sideslip increases drag and degrades performance
+just as a sideslip would in a single.
+
+To overcome this sideslip, the airplane must be banked into the operative engine. The sideslip caused by the bank
+angle and ball half-centered cancels out the sideslip created by the engine and rudder resulting in a
+\textbf{zero-sideslip condition}. The zero-sideslip condition reduces
+drag and therefore improves climb performance (or minimizes rate
+of descent). In the Duchess, the bank angle that results in zero sideslip is approximately three degrees.
+
+\begin{center}
+\includegraphics[width=0.6\linewidth]{zero-sideslip}
+\end{center}
+
+\emph{Memory aid: Heavier means good engine is less effective, which reduces \vmc.}
+
+\emph{Memory aid: Tail induces centripetal force which turns the airplane. So, you have to counteract that turn
+with a bank angle of \emph{3\degree}}.
+
+\chapter{Limitations}
+
+\section{Duchess Speeds}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\textcolor{red}{\textbf{$V_{MC}$}}      & \textbf{65}      & Minimum control speed.                                           \\
+\textbf{$V_{S0}$}                       & \textbf{60}      & Stall: landing configuration.                                    \\
+\textbf{$V_{S1}$}                       & \textbf{70}      & Stall: clean configuration.                                      \\
+\textcolor{blue}{\textbf{$V_{YSE}$}}    & \textbf{71}      & Intentional one engine inoperative speed.                        \\
+\textbf{$V_{XSE}$}                      & \textbf{85}      & Best angle of climb, one engine.                                 \\ \hline
+\multicolumn{1}{|l}{\textbf{$V_{SSE}$}} & \textbf{71}      & \multicolumn{1}{l|}{Intentional one engine inoperative speed.}   \\ \hline
+\textbf{$V_A$}                          & \textbf{132}     & Maneuvering speed (at Max gross weight).                         \\
+\textbf{$V_{LO}$}                       & \textbf{140/112} & Landing gear operating extend/retract.                           \\
+\textbf{$V_{LE}$}                       & \textbf{140}     & Max landing gear extended.                                       \\
+\textbf{$V_{FE}$}                       & \textbf{120/110} & Max flaps extended 20/35.                                        \\
+\textbf{$V_{NO}$}                       & \textbf{154}     & Max structural cruising speed.                                   \\
+\textbf{$V_{NE}$}                       & \textbf{194}     & Never exceed speed.                                              \\
+\textbf{$V_R$}                          & \textbf{71}      & Rotation speed. For training purposes, $V_R$ is increased to 80. \\
+\textbf{$V_X$}                          & \textbf{71}      & Best angle of climb.                                             \\
+\textbf{$V_Y$}                          & \textbf{85}      & Best rate of climb.                                              \\
+\textbf{}                               & \textbf{140}     & Emergency descent. \emph{Do not exceed!}                         \\
+\textbf{}                               & \textbf{100}     & Emergency landing gear extension (free fall), maximum.           \\
+\textbf{}                               & \textbf{95}      & Best glide: 12:1 with propellers feathered.                      \\
+\textbf{}                               & \textbf{25}      & Maximum demonstrated crosswind component.
+\end{tabular}
+\end{table}
+
+\section{Weight Limits}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\textbf{Maximum Ramp Weight}              & 3916 Pounds \\
+\textbf{Maximum Takeoff Weight}           & 3900 Pounds \\
+\textbf{Maximum Landing Weight}           & 3900 Pounds \\
+\textbf{Maximum Zero Fuel Weight}         & 3500 Pounds \\
+\textbf{Maximum Baggage Compartment Load} & 200 Pounds 
+\end{tabular}
+\end{table}
 
 
 
