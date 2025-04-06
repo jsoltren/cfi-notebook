@@ -11,13 +11,13 @@ bibliography:
 	biber notebook
 
 notebook.toc :
-	$(TEX) notebook.tex
+	$(PDFLATEX) notebook.tex
 
 notebook.pdf : resources/* notebook.toc bibliography
 	$(PDFLATEX) notebook.tex
 	open notebook.pdf
 
-multi.pdf : resources/* notebook.toc bibliography
+multi.pdf : resources/multi-engine.tex notebook.toc bibliography
 	$(PDFLATEX) multi.tex
 	open multi.pdf
 
